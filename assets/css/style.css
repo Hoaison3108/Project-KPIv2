@@ -1,0 +1,23 @@
+* {
+  /* kích thước của phần tử sẽ bao gồm cả phần padding và border. */
+  box-sizing: border-box;
+}
+html {
+  /* quy đổi kích thước 16 thành 10 */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", "Roboto", serif;
+}
+/* =======================================Common==================================== */
+
+/*========================================Header==================================== */
+.background-fullscreen {
+  height: 100vh; /* Chiều cao 100% của viewport */
+  width: 100vw; /* Chiều rộng 100% của viewport */
+
+  /* Linear gradient theo góc 135 độ */
+  background: linear-gradient(135deg, #dc996e, #2f85b6);
+}
