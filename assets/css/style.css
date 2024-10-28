@@ -17,6 +17,42 @@ body {
 }
 body {
   font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =======================================Common==================================== */
+.background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.background-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  width: 1260px;
+  height: 1000px;
+  position: absolute;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container__child {
+  width: 1060px;
+  height: 712px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background: pink;
+}
+.login__media {
+  display: flex;
+  object-fit: cover;
+}
