@@ -56,12 +56,15 @@ body {
   object-fit: cover;
 }
 .container {
-  width: 1060px;
+  width: 1260px;
+  height: 100vh;
   position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background: #fff; */
-  /* display: block; */
-  /* justify-content: center;
-  align-items: center; */
 }
 .container__child {
   width: 1060px;
@@ -69,9 +72,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   background: #fff;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  /* định vị khối con nằm trên để canh giữa với khối cha */
 }
 .login__media {
   display: flex;
@@ -136,7 +140,6 @@ body {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  z-index: 1;
   /* background: #fff; */
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.5);
 }
