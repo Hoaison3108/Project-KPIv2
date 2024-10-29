@@ -1,0 +1,140 @@
+* {
+  /* kích thước của phần tử sẽ bao gồm cả phần padding và border. */
+  box-sizing: border-box;
+}
+html,
+body {
+  /* quy đổi kích thước 16 thành 10 */
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", "Roboto", serif;
+}
+/* biến dùng chung */
+:root {
+  --bg-color: #fff;
+  --main-color: #006493;
+}
+body {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  /* được sử dụng để loại bỏ các hiệu ứng trang trí của văn bản. Khi áp dụng thuộc tính này, 
+    các trang trí mặc định như gạch chân, gạch ngang, hoặc gạch chân kép trên văn bản sẽ bị loại bỏ. */
+  text-decoration: none;
+}
+.btn {
+  display: inline-block;
+  min-width: 140px;
+  width: 140px;
+  line-height: 2;
+  height: 40px;
+  background: var(--main-color);
+  color: #ffb100;
+  text-align: center;
+  border-radius: 999px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  background: #ffb100;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  transition: 0.15s;
+}
+
+/* =======================================Common==================================== */
+
+.container {
+  width: 1260px;
+  height: 100vh;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  background: pink;
+}
+
+/* =======================================header==================================== */
+.header.fixed {
+  /*z-index kiểm soát thứ tự xếp chồng của các phần tử dọc theo trục thẳng đứng, mặc định là 0 nên 1 sẽ chồng lên trên*/
+  z-index: 1;
+  /* Tạo hiệu ứng bám dính, khi nội dung trong thẻ cha gần nhát có thanh cuộn */
+  position: sticky;
+  /* neo lại 8px: 36px -8 = 28px */
+  top: -28px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+  height: 100px;
+  margin-top: 21px;
+  /*z-index kiểm soát thứ tự xếp chồng của các phần tử dọc theo trục thẳng đứng, mặc định là 0 nên 1 sẽ chồng lên trên*/
+  z-index: 1;
+  /* Tạo hiệu ứng bám dính, khi nội dung trong thẻ cha gần nhát có thanh cuộn */
+  position: sticky;
+  /* neo lại 8px: 36px -8 = 28px */
+  top: -28px;
+}
+.header__logo {
+  display: flex;
+  margin: 28px 221px 28px 33px;
+}
+.header__logo--img {
+  width: 50px;
+  height: 46px;
+  object-fit: cover;
+}
+.header__logo--name-company {
+  font-family: "roboto";
+  font-size: 3.8rem;
+  font-weight: 600;
+  color: var(--main-color);
+  text-align: center;
+}
+.header__nav {
+  width: 491px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 1.8rem;
+  /* background: #ffb100; */
+  padding: 21px;
+}
+.header__nav--link:hover {
+  color: #000;
+  /* sử dụng text-shadow thay font weight */
+  text-shadow: 1px 0 0 currentColor;
+  /* làm chậm chuyển động tạo cảm giác mượt */
+  transition: 0.25s;
+  cursor: pointer;
+}
+.nav__link--active::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  top: -3px;
+  position: relative;
+  right: 5px;
+}
+.header__cta {
+  margin-left: 200px;
+}
+.header__btn--logout {
+  padding-top: 5px;
+}
