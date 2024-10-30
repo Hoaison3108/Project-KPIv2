@@ -59,7 +59,7 @@ a {
   position: absolute;
   justify-content: center;
   display: flex;
-  background: pink;
+  /* background: pink; */
 }
 
 /* =======================================header==================================== */
@@ -83,8 +83,8 @@ a {
   z-index: 1;
   /* Tạo hiệu ứng bám dính, khi nội dung trong thẻ cha gần nhát có thanh cuộn */
   position: sticky;
-  /* neo lại 8px: 36px -8 = 28px */
-  top: -28px;
+  /* neo lại 5px */
+  top: -5px;
 }
 .header__logo {
   display: flex;
@@ -137,4 +137,90 @@ a {
 }
 .header__btn--logout {
   padding-top: 5px;
+}
+/* =======================================hero==================================== */
+.container-child {
+  width: 1200px;
+}
+.hero__image {
+  width: 1200px;
+  margin-top: 121px;
+  padding-top: 40px;
+  min-height: 90vh;
+}
+.hero__image--img {
+  width: 1200px;
+  text-align: center;
+  object-fit: cover;
+}
+/* =======================================hero list==================================== */
+.hero__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  /* bố cục sẽ lặp lại 3 cột, mỗi cột chiếm một phần bằng nhau trong chiều rộng của grid container. */
+  grid-template-columns: repeat(3, 1fr);
+  /* dùng để thiết lập khoảng cách giữa các cột trong bố cục Grid Layout hoặc Multi-column Layout
+  mỗi cột sẽ có khoảng cách 30 pixel với cột bên cạnh */
+  column-gap: 27px;
+}
+.hero__list--item {
+  width: 100%;
+}
+.list__item--img {
+  width: 100%;
+  object-fit: cover;
+  background: #fff;
+  border-radius: 4px;
+  /* viền 16, nét liền, màu  */
+  border: 16px solid #eaf6ff;
+  transition: 0.5s;
+}
+.list__item--img:hover {
+  border-color: #2e80ce;
+  /*translateY(-16px): phần tử sẽ di chuyển lên trên 16 pixel từ vị trí ban đầu của nó. */
+  transform: translateY(-16px);
+  /* transform: scale(1.1); */
+}
+/* =======================================hero product==================================== */
+.hero__product {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  padding-top: 28px;
+  /* bố cục sẽ lặp lại 4 cột, mỗi cột chiếm một phần bằng nhau trong chiều rộng của grid container. */
+  grid-template-columns: repeat(4, 1fr);
+  /* dùng để thiết lập khoảng cách giữa các cột trong bố cục Grid Layout hoặc Multi-column Layout
+  mỗi cột sẽ có khoảng cách 30 pixel với cột bên cạnh */
+  column-gap: 20px;
+}
+.product__list {
+  padding-top: 28px;
+}
+.product__list:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.product__list--img {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+}
+.product__list-name {
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.7;
+  font-size: 1.8rem;
+  background: #eaf6ff;
+  border-radius: 4px;
+}
+.product__list:hover .product__list-name {
+  transition: 0.5s;
+  background: #2e80ce;
+  overflow: hidden;
+  color: #fff;
 }
