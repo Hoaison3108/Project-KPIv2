@@ -91,19 +91,12 @@ a {
   margin: 28px 221px 28px 33px;
 }
 .header__logo--img {
-  width: 50px;
-  height: 46px;
+  width: 70px;
+  height: 66px;
   object-fit: cover;
 }
-.header__logo--name-company {
-  font-family: "roboto";
-  font-size: 3.8rem;
-  font-weight: 600;
-  color: var(--main-color);
-  text-align: center;
-}
 .header__nav {
-  width: 491px;
+  width: 565px;
   height: 20px;
   display: flex;
   align-items: center;
@@ -140,16 +133,16 @@ a {
 }
 /* =======================================hero==================================== */
 .container-child {
-  width: 1200px;
+  width: 1260px;
 }
 .hero__image {
-  width: 1200px;
+  width: 100%;
   margin-top: 121px;
   padding-top: 40px;
   min-height: 90vh;
 }
 .hero__image--img {
-  width: 1200px;
+  width: 100%;
   text-align: center;
   object-fit: cover;
 }
